@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <h1 class="text-center">Thông tin điện thoại</h1>
+            <div>
+                <label>Mã điện thoại</label>
+                <input type="text" class="form-control" ng-model="inputValue.ma">
+                <small class="text-danger" ng-show="checkEmpty.ma">Không được để trống mã điện thoại</small>
+            </div>
+            <div>
+                <label>Tên điện thoại</label>
+                <input type="text" class="form-control" ng-model="inputValue.ten">
+                <small class="text-danger" ng-show="checkEmpty.ten">Không được để trống tên điện thoại</small>
+            </div>
+            <div>
+                <label>Hãng điện thoại</label>
+                <select class="form-control" ng-model="inputValue.hang">
+                    <option value="Samsung">Samsung</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Oppo">Oppo</option>
+                </select>
+                <small class="text-danger" ng-show="checkEmpty.hang">Không được để trống hãng điện thoại</small>
+            </div>
+            <div>
+                <label>Giá điện thoại</label>
+                <input type="number" class="form-control" ng-model="inputValue.gia">
+                <small class="text-danger" ng-show="checkEmpty.gia">Không được để trống giá điện thoại</small> <br>
+                <small class="text-danger" ng-show="checkDuong.gia">Giá điện thoại phải lớn hơn 100</small>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-success mt-4" ng-click="onCreate()">Đặt mua</button>
+            </div>
+        </div>
+    </div>
+</div>
